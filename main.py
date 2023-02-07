@@ -139,15 +139,64 @@ import random
 # for i in range(int(much)):
 #     print(*generate_password(chars, length), sep="")
 
-def number(num):
-    mylist = []
-    prev = 0
-    new = 1
-    summ = 0
-    for i in range(num):
-        summ = prev + new
-        new = prev
-        prev = summ
-    return new
+# def number(num):
+#     mylist = []
+#     prev = 0
+#     new = 1
+#     summ = 0
+#     for i in range(num):
+#         summ = prev + new
+#         new = prev
+#         prev = summ
+#     return new
+#
+# print(number(int(input())))
 
-print(number(int(input())))
+# def get_w(num):
+#     l_space = 0
+#     r_space = num + 2
+#     w_list = []
+#     string = ""
+#     for i in range(num):
+#         if i == 0:
+#             string = (l_space * " " + "*" + r_space * " " + "*" + r_space * " ")
+#         elif i == num - 1:
+#             string = (l_space * " " + "*" + l_space * " ")
+#         else:
+#             string = (l_space * " " + "*" + r_space * " " + "*" + r_space * " ")
+#         w_list.append(string)
+#         l_space += 1
+#         r_space -= 2
+#     for i in range(num):
+#         print(w_list[i])
+#
+# get_w(int(input()))
+
+from random import *
+
+# def number(num):
+#     mylist = [0, 1]
+#     for i in range(num):
+#         mylist.append(mylist[i] + mylist[i + 1])
+#     return mylist[i + 1]
+#
+# print(number(int(input())))
+
+
+def get_w(num):
+    w_list = []
+    string = ""
+    for i in range(num):
+        if i == 0:
+            string = "*" + (num * 2 - 2) * " " + "*" + (num * 2 - 2) * " " + "*"
+        elif i == num - 1:
+            string = ((num - 1) * " " + "*") + ((num - 1) * 2 * " " + "*")
+        else:
+            string = (i * " " + "*" + (num -1 - i) * " " + "*")
+        w_list.append(string)
+    for i in range(num):
+        print(w_list[i])
+
+    print(w_list, end="\n")
+
+get_w(int(input()))
