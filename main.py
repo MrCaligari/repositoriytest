@@ -183,20 +183,51 @@ from random import *
 # print(number(int(input())))
 
 
-def get_w(num):
-    w_list = []
-    string = ""
-    for i in range(num):
-        if i == 0:
-            string = "*" + (num * 2 - 2) * " " + "*" + (num * 2 - 2) * " " + "*"
-        elif i == num - 1:
-            string = ((num - 1) * " " + "*") + ((num - 1) * 2 * " " + "*")
-        else:
-            string = (i * " " + "*" + (num -1 - i) * " " + "*")
-        w_list.append(string)
-    for i in range(num):
-        print(w_list[i])
+# def get_w(num):
+#     w_list = []
+#     string = ""
+#     for i in range(num):
+#         if i == 0:
+#             string = "*" + (num * 2 - 2) * " " + "*" + (num * 2 - 2) * " " + "*"
+#         elif i == num - 1:
+#             string = ((num - 1) * " " + "*") + ((num - 1) * 2 * " " + "*")
+#         else:
+#             string = (i * " " + "*" + (num -1 - i) * " " + "*")
+#         w_list.append(string)
+#     for i in range(num):
+#         print(w_list[i])
+#
+#
+# get_w(int(input()))
 
-    print(w_list, end="\n")
+# my_list = [1, 2, 5, 3, "а", "run"]
+# my_list2 = my_list
+# my_list2[0] = "Hello"
+# print(my_list)
+#
+# print(my_list[-1])
+# arr = [0] * 4
+# print(arr)
 
-get_w(int(input()))
+# "ДЗ. Написать реализацию списка самостоятельно(append и запись по индексу[])"
+# mylist = [4,4,6,3,2,1,45,3,25,3,211]
+# max_result = mylist[0]
+# min_result = mylist[0]
+# for i in range(len(mylist)):
+#     if mylist[i] <= min_result:
+#         min_result = mylist[i]
+#     if mylist[i] >= max_result:
+#         max_result = mylist[i]
+# print(max_result, min_result)
+
+# my_list = [4,4,6,3,2,5,3,1]
+# cnt = 0
+# result = 0
+# for i in range(len(my_list)):
+#     if my_list.count(my_list[i]) > cnt:
+#         cnt = my_list.count(my_list[i])
+#         result = my_list[i]
+# print(result, cnt)
+
+
+
